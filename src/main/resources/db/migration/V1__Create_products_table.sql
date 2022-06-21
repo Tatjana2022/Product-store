@@ -1,7 +1,7 @@
-CREATE TABLE store_products (
-    id INT IDENTITY PRIMARY KEY,
-    name VARCHAR(50),
+CREATE TABLE store_products
+(
+    id          IDENTITY PRIMARY KEY,
+    name        VARCHAR(50),
     description VARCHAR(255),
-    created DATE
-
+    created     DATE
 );

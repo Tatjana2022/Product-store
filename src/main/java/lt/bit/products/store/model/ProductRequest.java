@@ -1,19 +1,12 @@
 package lt.bit.products.store.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.time.LocalDate;
 
-
 public class ProductRequest {
-
 
   private String name;
   private String description;
   private LocalDate created;
-
 
   public String getName() {
     return name;

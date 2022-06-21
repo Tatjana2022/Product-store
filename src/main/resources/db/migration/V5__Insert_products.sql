@@ -1,0 +1,10 @@
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 1', 'descr 11', CURRENT_DATE());
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 2', 'descr 12', CURRENT_DATE());
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 10', 'descr 10', CURRENT_DATE());
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 6', 'descr 16', CURRENT_DATE());
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 7', 'descr 17', CURRENT_DATE());
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 8', 'descr 18', CURRENT_DATE());
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 3', 'descr 13', CURRENT_DATE());
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 4', 'descr 14', CURRENT_DATE());
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 5', 'descr 15', CURRENT_DATE());
+INSERT INTO store_products(name, description, created) VALUES ('NUMBER 9', 'descr 19', CURRENT_DATE());

@@ -1,10 +1,13 @@
 package lt.bit.products.store.controller;
 
+import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
+
 import java.util.List;
 import lt.bit.products.store.model.Product;
 import lt.bit.products.store.model.ProductItems;
 import lt.bit.products.store.model.ProductRequest;
 import lt.bit.products.store.service.ProductService;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -74,6 +77,7 @@ class ProductController {
   }
 
   @DeleteMapping(ID_MAPPING)
+  //@RequestMapping(method = DELETE, value = ID_MAPPING)
   ResponseEntity<Void> deleteProduct(@PathVariable("id") Integer productId) {
     Product product = service.findProduct(productId);
     if (product == null) {

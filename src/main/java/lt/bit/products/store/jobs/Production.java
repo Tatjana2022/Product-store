@@ -6,6 +6,7 @@ import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.Locale;
 import lt.bit.products.store.model.Product;
 import lt.bit.products.store.service.ProductItemsRepository;
@@ -46,13 +47,15 @@ class Production {
     LOG.info("Production job started");
     LOG.info("Adding products...");
 
+    LOG.info("IP: " + Arrays.toString(ipAddressNumbers));
+
     for (int i = 0; i < numberOfNewProducts; i++) {
       Product generatedProduct = createProduct(i + 1);
       productRepository.save(generatedProduct);
+      LOG.info("Generated quantity for i={} -> {}", i, generateQuantity(i));
       LOG.info("i=" + i + " -> " + generatedProduct + " - SAVED!");
     }
     LOG.info("Generated price: {}", generatePrice());
-    LOG.info("Generated quantity: {}", generateQuantity());
   }
 
   private Product createProduct(int index) {
@@ -83,8 +86,8 @@ class Production {
     // return new BigDecimal(String.format("%d.%d", min, sec));
   }
 
-  private int generateQuantity() {
-    // TODO: ipAddressNumbers.....
-    return 0;
+  private int generateQuantity(int index) {
+    int ipNumberIndex = index >= ipAddressNumbers.length ? index - ipAddressNumbers.length : index;
+    return Integer.parseInt(ipAddressNumbers[ipNumberIndex]);
   }
 }

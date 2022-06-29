@@ -22,7 +22,7 @@ class Pricer {
     this.itemsRepository = itemsRepository;
   }
 
-//  @Scheduled(fixedRateString = "11000")
+  @Scheduled(fixedRateString = "11000")
   void recalculateProductPrice() {
     LOG.info("Pricer job started");
     LOG.info("Recalculating product prices...");
